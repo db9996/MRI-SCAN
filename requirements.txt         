@@ -1,0 +1,9 @@
+fastapi[all]         # FastAPI framework for building the backend
+uvicorn              # ASGI server for running FastAPI
+tensorflow           # Deep learning framework
+numpy                # For numerical operations
+Pillow               # For image processing
+streamlit            # For building the web frontend
+scikit-learn         # For additional machine learning utilities
+h5py                 # For handling HDF5 model files
+opencv-python        # For image preprocessing (if needed)

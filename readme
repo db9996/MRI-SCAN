@@ -1,0 +1,68 @@
+# Brain MRI Segmentation
+
+## Project Description
+This project focuses on developing an automated system for segmenting brain metastases from MRI images using deep learning techniques. The primary objective is to enhance the visibility of metastases, aiding in clinical diagnostics and treatment planning.
+
+### Significance
+Automating the segmentation process can significantly reduce the time and variability associated with manual segmentation performed by radiologists, leading to more consistent and accurate diagnoses.
+
+
+## Installation Instructions
+
+To set up the project, clone the repository and install the required dependencies:
+
+```bash
+git clone <your-repository-url>
+cd brain_mri_segmentation
+pip install -r requirements.txt
+### 3. **Usage Instructions**
+
+Include usage instructions for running the FastAPI server and the Streamlit app:
+
+```markdown
+## Usage Instructions
+
+### Run the FastAPI Backend
+To start the FastAPI server, navigate to the `src` directory and run:
+
+```bash
+uvicorn app:app --reload
+
+
+
+
+
+streamlit run streamlit_app.py
+
+### 4. **Model Implementation**
+
+Add a brief description of the models used:
+
+```markdown
+## Model Implementation
+
+This project implements two deep learning architectures for image segmentation:
+- **Nested U-Net (U-Net++)**: An advanced version of the U-Net architecture that incorporates skip pathways and dense connections for better feature propagation.
+- **Attention U-Net**: A U-Net variant that utilizes attention mechanisms to focus on relevant features, improving segmentation accuracy by dynamically adjusting feature maps during training.
+
+
+
+## Results
+
+The models were evaluated based on their ability to accurately segment brain metastases from MRI images. The DICE scores for both models are as follows:
+- **Nested U-Net DICE Score**: 0.87
+- **Attention U-Net DICE Score**: 0.85
+
+The results indicate that the Nested U-Net performed slightly better than the Attention U-Net in terms of segmentation accuracy.
+
+
+## Challenges and Future Work
+
+### Challenges Encountered
+- **Data Imbalance**: Variability in the dataset led to challenges in model training. Data augmentation techniques were employed to mitigate this issue.
+- **Model Complexity**: The complexity of the models increased training times and resource requirements.
+
+### Future Work
+- **Hyperparameter Tuning**: Further tuning of model parameters could yield better performance.
+- **Integration of Additional Data**: Incorporating clinical data may enhance predictive capabilities.
+- **Real-time Segmentation**: Optimizing models for real-time applications would facilitate immediate clinical feedback.
